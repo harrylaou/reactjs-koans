@@ -18,7 +18,7 @@ You are also going to practise unit testing with React using:
   - Enzyme
   - Jsdom
   - React Test Utilities
-  
+
 ## Installation
 
 Make sure you have Node.js installed.
@@ -50,3 +50,7 @@ Execute in your console: `npm run test-koans-3`
 
 Tests of Koans 3 are broken, you need to fix the tests by editing this file:
  - koans-3/tasks/app.spec.js
+
+## License
+
+This material is available for private, non-commercial use under the [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html).
