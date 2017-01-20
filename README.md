@@ -1,9 +1,5 @@
 # React Koans
 
-What are [koans](http://alexlobera.com/koans-javascript-and-react/)?
-
-For questions please join [![Gitter](https://badges.gitter.im/hackages/hackjam-react.svg)](https://gitter.im/alexlbr/react-koans?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 This is a simple set of exercises to introduce some React key concepts. The concepts your are going to learn are:
   - Props
   - State
