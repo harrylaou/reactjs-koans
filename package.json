@@ -8,10 +8,7 @@
     "test-koans-2": "./node_modules/.bin/mocha './koans-2/**/*.spec.js' --compilers js:babel-core/register --require ./test/jsdom-setup.js",
     "test-koans-3": "./node_modules/.bin/mocha './koans-3/**/*.spec.js' --compilers js:babel-core/register --require ./test/jsdom-setup.js",
     "test": "./node_modules/.bin/mocha './**/*.spec.js' --compilers js:babel-core/register --require ./test/jsdom-setup.js",
-    "test:watch:1": "npm test-koans-1 -- --watch",
-    "test:watch:2": "npm test-koans-2 -- --watch",
-    "test:watch:3": "npm test-koans-3 -- --watch",
-    "test:watch:all": "npm test -- --watch"
+    "test:watch": "npm test -- --watch"
   },
   "keywords": [
     "react, reactjs, koans, react instance, react component, react element, state, props"
