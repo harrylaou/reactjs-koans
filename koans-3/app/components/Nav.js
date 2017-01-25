@@ -1,18 +1,18 @@
-import React from "react";
+import React, { Component } from 'react'
 
-class Nav extends React.Component {
+class Nav extends Component {
   constructor() {
-    super();
-    this.navigateToTodoList = this.navigateToTodoList.bind(this);
-    this.navigateToHomePage = this.navigateToHomePage.bind(this);
+    super()
+    this.navigateToTodoList = this.navigateToTodoList.bind(this)
+    this.navigateToHomePage = this.navigateToHomePage.bind(this)
   }
 
   navigateToTodoList() {
-    this.context.router.push('/todos');
+    this.context.router.push('/todos')
   }
 
   navigateToHomePage() {
-    this.context.router.push('/');
+    this.context.router.push('/')
   }
 
   render() {
@@ -25,12 +25,12 @@ class Nav extends React.Component {
           <a className="home" onClick={this.navigateToHomePage}>Todos</a>
         </li>
       </ul>
-    );
+    )
   }
 }
 
 Nav.contextTypes = {
-  router: React.PropTypes.object.isRequired,
-};
+  router: React.PropTypes.object.isRequired
+}
 
-export default Nav;
+export default Nav

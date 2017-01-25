@@ -1,14 +1,14 @@
-const BASE_URL = 'http://notimplemented.yet';
+const BASE_URL = 'http://notimplemented.yet'
 
 export const getTodos = (userId) => (
   fetch(`${BASE_URL}user/todos`, {
     method: 'GET',
     body: JSON.stringify({
-      userId,
+      userId
     }),
-    mode: 'cors',
+    mode: 'cors'
   })
   .then(response => {
-    return response.json();
+    return response.json()
   })
-);
+)

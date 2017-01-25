@@ -1,22 +1,23 @@
-import React from "react";
-import * as api from "../api/index";
+import React, { Component } from 'react'
+import * as api from '../api/index'
 
-class TodoList extends React.Component {
+class TodoList extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       tasks: []
-    };
+    }
   }
 
   componentDidMount() {
-    api.getTodos(this.props.userId)
-    .then((response) => {
-      this.setState({tasks:response})
-    })
-    .catch(err => {
-      console.error(err.stack)
-    });
+    api
+      .getTodos(this.props.userId)
+      .then((response) => {
+        this.setState({ tasks: response })
+      })
+      .catch(err => {
+        console.error(err.stack)
+      })
   }
 
   render() {
@@ -24,8 +25,8 @@ class TodoList extends React.Component {
       <div>
         NOT IMPLEMENTED :(
       </div>
-    );
+    )
   }
 }
 
-export default TodoList;
+export default TodoList
