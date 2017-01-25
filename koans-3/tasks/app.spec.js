@@ -3,7 +3,7 @@ import sinon from 'sinon'
 import { mount, shallow } from 'enzyme'
 import Nav from '../app/components/Nav'
 import TodoList from '../app/components/TodoList'
-import * as api from "../app/api/index"
+import * as api from "../app/api"
 
 
 describe('Nav component', () => {
@@ -19,7 +19,7 @@ describe('Nav component', () => {
       // Nore hints? check the https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md
       const wrapper = shallow(
         <Nav />
-      )
+      , { context: { router } })
       wrapper.find('.home').simulate('click')
     })
 
@@ -28,9 +28,9 @@ describe('Nav component', () => {
       // Hint, you need to do 2 things:
       // 1. Inject the context like you did in the previous exercise 
       // 2. Shallow does not "mount"" the component and so it does not execute lifecycle methods, it doesn't create refs,...
-      const wrapper = shallow(
+      const wrapper = mount(
         <Nav />
-      )
+      , { context: { router } })
       // don't change next line, you must use .ref() instead of .find()
       wrapper.ref('todos').simulate('click')
       sinon.assert.calledWith(router.push, '/todos')
@@ -42,9 +42,14 @@ describe('TodoList component', () => {
       // api/index.js is not injected into the TodoList, instead it's imported using the import syntax. 
       // So how do you "fake" it?
       // Hint: Use sinon stubs
+      sinon
+        .stub(api, 'getTodos')
+        .returns(Promise.resolve())
+
       const wrapper = mount(
-        <TodoList />
+        <TodoList userId="123" />
       )
+
       sinon.assert.calledWith(api.getTodos, '123')
     })
 })
