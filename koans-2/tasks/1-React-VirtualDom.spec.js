@@ -32,7 +32,7 @@ describe('Virtual DOM test. React Compoment, React Instance and React Element:',
     // hint, uncomment next line to see the object in the console:
     // console.log('--------->',reactElement)
 
-    //An assertion library would give you many clues and it would be too easy, that's why we are throwing an Error with a custome message instead
+    //An assertion library would give you many clues and it would be too easy, that's why we are throwing an Error with a custom message instead
     if ('CHANGE THIS' !== typeof reactElement.addTask) {
       throw new Error('The typeof(reactElement.addTask) is not correct')
     }
