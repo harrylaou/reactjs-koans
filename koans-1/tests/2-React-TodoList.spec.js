@@ -31,6 +31,7 @@ describe('ToDo List. A React intro to one-way data-binding ', () => {
     it('Should be the name for the task and for the input', () => {
       const newTask = 'Learn more advance JavaScript too!'
       todoListWrapper.find('input').get(0).value = newTask
+      todoListWrapper.find('input').simulate('change')
       todoListWrapper.find('button').simulate('click')
       expect(todoListWrapper.find('ul li').last().text()).to.be.equal(newTask)
     })
