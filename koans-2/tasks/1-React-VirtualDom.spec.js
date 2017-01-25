@@ -36,7 +36,7 @@ describe('Virtual DOM test. React Compoment, React Instance and React Element:',
     if ('CHANGE THIS' !== typeof reactElement.addTask) {
       throw new Error('The typeof(reactElement.addTask) is not correct')
     }
-  });
+  })
   
   it('Rendering into the document should return a React Instance.', () => {
     let component = TestUtils.renderIntoDocument(<TodoList/>)
