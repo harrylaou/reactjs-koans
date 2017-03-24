@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-// Task: Fill the `return` of `TodoList` class. 
+// Task: Fill the `return` of `TodoList` class.
 // It should return a list of `ListItem`. You need to display the task name.
 
 // Minimize the state in your components and get data using props from parent components whenever possible.

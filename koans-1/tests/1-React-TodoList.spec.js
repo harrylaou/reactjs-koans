@@ -1,33 +1,33 @@
 import React from 'react'
 import { expect } from 'chai'
 import { mount } from 'enzyme'
-import TodoList from '../tasks/1-React-TodoList-props-and-state.js'
-import { ListItem } from '../tasks/1-React-TodoList-props-and-state.js'
+import TodoList from '../tasks/Task_1'
+import { ListItem } from '../tasks/Task_1'
 
-describe('Create a ToDo List. A React intro to state and props', () => {
+describe('Todo List. A React intro to state and props', () => {
 
-  describe('Task #1 - display a list of tasks', () => {
-    
+  describe('Task 1 - display a list of tasks', () => {
+
     const todoListWrapper = mount(<TodoList/>)
 
-    it('The component should start with a ul tag elementsss', () => {
+    it('The TodoList component should have a <ul> tag element', () => {
       const actual = todoListWrapper.find('ul')
       const expected = 1
       expect(actual).to.be.length(expected)
     })
-    
-    it('There should be 2 elements in the list', () => {
+
+    it('The TodoList should render 2 ListItems', () => {
       const actual = todoListWrapper.find('ul li').length
       const expected = 2
       expect(actual).to.be.equal(expected)
     })
 
-    it('The taks component should pass the task as a parameter to the child component', () => {
+    it('The TodoList component should pass a task object from the TodoList state to the ListItem component through a prop called task', () => {
       const actual = todoListWrapper.find(ListItem).first().props().task
       expect(actual).not.to.be.equal(undefined)
     })
 
-    it('The list item should render the task name', () => {
+    it('The ListItem component should render the name of the task', () => {
       const actual = todoListWrapper.find('ul li').first().text()
       const expected = 'Learn more JavaScript'
       expect(actual).to.be.equal(expected)

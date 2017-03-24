@@ -30,8 +30,8 @@ Make sure you have Node.js installed.
 Execute in your console: `npm run test-koans-1`
 
 Tests will tell you there are some errors. You need to fix them by editing these 2 files:
- - koans-1/tasks/1-React-TodoList-props-and-state.js
- - koans-1/tasks/1-React-TodoList-one-way-data-binding.js
+ - koans-1/tasks/Task_1.js
+ - koans-1/tasks/Task_2.js
 
 ### Koans 2:
 
