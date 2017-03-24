@@ -25,9 +25,6 @@ describe('Todo List. A React intro to one-way data-binding ', () => {
       expect(actual).to.be.length(expected)
     })
 
-
-    // const todoListWrapper = mount(<TodoList/>)
-
     it('Should be possible to add a new task to the list by clicking on NewTaskButton', () => {
       todoListWrapper.find('button').simulate('click')
       expect(todoListWrapper.find('ul li')).to.be.length(2)

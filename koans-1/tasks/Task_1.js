@@ -19,12 +19,12 @@ class TodoList extends Component {
   render() {
     // Properties can pass data to React components. The sintax is similar to HTML elements' attributs.
     // Below you can see how to pass data to a child component using a 'task' property
-    let tasksComponents = this.state.tasks.map( task => (<ListItem task={task} />) )
+    let tasksComponents = this.state.tasks.map( task => (<ListItem />) )
 
     // Hint: Don't forget to wrap it with an `ul` element
     return (
       <div>
-          <ul>{tasksComponents}</ul>
+          // Write some code here
       </div>
     )
   }
@@ -34,7 +34,7 @@ class TodoList extends Component {
 // Don't you know how?  Some key words: interpolate react props
 export const ListItem = props =>(
     <li>
-        {props.task.name}
+          // Write some code here
     </li>
 )
 

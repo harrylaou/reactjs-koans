@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 // Users should be able to add tasks to the list.
 // Task 1: Add the newTaskAddButton to the render and bind it to a the component method addTask
@@ -14,13 +14,13 @@ class TodoList extends Component {
         { name: "Learn more advance React, it's awesome!" }
       ]
     }
-
+    this.inputTaskName
     this.inputChanged = this.inputChanged.bind(this)
   }
 
   inputChanged(event) {
     //this method is just a hint of how you can implement the addTask function
-    console.log(this.refs.txt.value)
+    console.log(this.inputTaskName.value)
   }
 
   // Task 2. Implement this method to add new tasks to the list
@@ -33,7 +33,7 @@ class TodoList extends Component {
 
   render() {
     const TasksComponents = this.state.tasks.map((task, index) => (<ListItem task={task} />) )
-    const NewTaskInput = <input ref="txt" type="text" onChange={this.inputChanged}/>
+    const NewTaskInput = <input ref={ el => { this.inputTaskName = el }} type="text" onChange={this.inputChanged}/>
     const NewTaskButton = <button>Add new Product</button>
 
     return (
