@@ -39,9 +39,10 @@ class TodoList extends Component {
     return (
       <div>
         <ul>
-          // Write some code here
+          {TasksComponents}
         </ul>
-        // Write some code here
+        {NewTaskInput}
+        {NewTaskButton}
       </div>
     )
   }
