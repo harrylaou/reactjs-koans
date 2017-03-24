@@ -32,7 +32,7 @@ class TodoList extends Component {
   }
 
   render() {
-    const TasksComponent = this.state.tasks.map((task, index) => (<ListItem />) )
+    const TasksComponents = this.state.tasks.map((task, index) => (<ListItem task={task} />) )
     const NewTaskInput = <input ref="txt" type="text" onChange={this.inputChanged}/>
     const NewTaskButton = <button>Add new Product</button>
 
@@ -49,7 +49,7 @@ class TodoList extends Component {
 
 export const ListItem = props => (
     <li>
-        // Write some code here
+        {props.task.name}
     </li>
 )
 
