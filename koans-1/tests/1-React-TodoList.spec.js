@@ -16,7 +16,7 @@ describe('Todo List. A React intro to state and props', () => {
       expect(actual).to.be.length(expected)
     })
 
-    it('The TodoList should render 2 ListItems', () => {
+    it('The TodoList component should render 2 ListItems', () => {
       const actual = todoListWrapper.find('ul li').length
       const expected = 2
       expect(actual).to.be.equal(expected)
