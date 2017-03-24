@@ -6,7 +6,7 @@ import { ListItem } from '../tasks/Task_1'
 
 describe('Todo List. A React intro to state and props', () => {
 
-  describe('Task 1 - display a list of tasks', () => {
+  describe('Task 1 - Display a list of tasks', () => {
 
     const todoListWrapper = mount(<TodoList/>)
 
